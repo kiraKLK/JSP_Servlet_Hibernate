@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>SaveProduct</servlet-name>
+        <servlet-class>com.bookstore.controller.SaveProduct</servlet-class>
+        <multipart-config>
+            <!-- Đặt thông số cấu hình tại đây -->
+            <max-file-size>5242880</max-file-size> <!-- Kích thước tối đa cho mỗi tệp: 5MB -->
+            <max-request-size>10485760</max-request-size> <!-- Kích thước yêu cầu tối đa: 10MB -->
+            <file-size-threshold>1048576</file-size-threshold> <!-- Kích thước tệp nhỏ hơn 1MB sẽ lưu trong bộ nhớ tạm -->
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveProduct</servlet-name>
+        <url-pattern>/BookStore/save-product</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+  
+     
+</web-app>
